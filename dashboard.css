@@ -1,0 +1,342 @@
+/* dashboard.css */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+}
+
+.add-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.todo-table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.todo-table th, .todo-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.todo-table th {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.no-tasks {
+    color: #999;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* CSS for delete button */
+.delete-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+/* CSS for search bar */
+/* CSS for search form */
+form[action="dashboard.php"][method="get"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Search input field styling */
+input[type="text"] {
+    padding: 12px 20px;
+    width: 400px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Change border color when input is focused */
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+/* Search button styling */
+.search-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for the search button */
+.search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Style for filter dropdown */
+select[name="status_filter"] {
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Change border color when dropdown is focused */
+select[name="status_filter"]:focus {
+    border-color: #007bff;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    color: #bbb;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+}
+
+/* Profile information styling */
+.modal-content h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal-content p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Profile image styling */
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #4CAF50;
+}
+
+/* User info button styling */
+/* Profile button styling */
+.user-info-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.user-info-button:hover {
+    background-color: #45a049;
+}
+
+/* Edit profile container */
+.edit-profile-container {
+    max-width: 500px; /* Increased width for more space */
+    margin: 50px auto; /* Centered with margin from top */
+    padding: 40px; /* Increased padding for spacious feel */
+    background: #ffffff;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    border: 1px solid #e0e0e0;
+}
+
+/* Heading styles */
+.edit-profile-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* More space below heading */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px; /* Increased spacing between fields */
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px; /* More space between label and input */
+    display: block;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px; /* More padding for comfort */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Increased font size for better readability */
+    transition: border-color 0.3s;
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Space buttons apart */
+}
+
+/* Button styling */
+.update-button,
+.cancel-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Increased padding */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 48%; /* Button width for flex layout */
+}
+
+.update-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Cancel button styles */
+.cancel-button {
+    background-color: #f44336; /* Red */
+}
+
+.cancel-button:hover {
+    background-color: #e53935; /* Darker Red */
+}
